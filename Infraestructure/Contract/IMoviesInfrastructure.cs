@@ -1,17 +1,16 @@
 ﻿using DataAccess.Models.Tables;
-using Infraestructure.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestructure.Contract
+namespace Infrastructure.Contract
 {
-    public interface IMoviesInfraestructure
+    public interface IMoviesInfrastructure
     {
         #region GET
-        List<MoviesDTO> GetMovies();
+        List<Movies> GetMovies();
         #endregion
 
         #region POST

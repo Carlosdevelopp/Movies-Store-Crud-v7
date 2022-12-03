@@ -3203,11 +3203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\Infraestructure\\Infraestructure.csproj",
-      "projectName": "Infraestructure",
-      "projectPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\Infraestructure\\Infraestructure.csproj",
+      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\Infraestructure\\Infrastructure.csproj",
+      "projectName": "Infrastructure",
+      "projectPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\Infraestructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\Infraestructure\\obj\\",
+      "outputPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\Infraestructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3225,8 +3225,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\carlo\\source\\repos\\MoviesStore\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\DataAccess\\DataAccess.csproj"
             }
           }
         }

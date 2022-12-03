@@ -1,40 +1,39 @@
 ﻿using DataAccess.Contract;
 using DataAccess.Models.Tables;
-using Infraestructure.Contract;
-using Infraestructure.DTO;
+using Infrastructure.Contract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Infraestructure.Implementation
+namespace Infrastructure.Implementation
 {
-    public class MoviesInfraestructure : IMoviesInfraestructure
+    public class MoviesInfrastructure : IMoviesInfrastructure
     {
         private readonly IMoviesDataAccess _moviesDA;
 
-        public MoviesInfraestructure(IMoviesDataAccess moviesDataAccess)
+        public MoviesInfrastructure(IMoviesDataAccess moviesDataAccess)
         {
             _moviesDA = moviesDataAccess;
         }
 
         #region GET
         //Traer todos los registros
-        public List<MoviesDTO> GetMovies()
+        public List<Movies> GetMovies()
         {
-            List<Movies> movies = _moviesDA.GetMovies();
+            List<Movies> Movies = _moviesDA.GetMovies();
 
-            List<MoviesDTO> moviesDTO = (from m in movies
-                                         select new MoviesDTO
+            List<Movies> movies = (from u in Movies
+                                         select new Movies
                                          {
-                                             DescriptionMovie = m.Description,
-                                             TitleMovie = m.Title,
-                                             ReleaseMovie = m.Release,
-                                             RunningTimeMovie = m.RunningTime,
+                                             Description = u.Description,
+                                             Title = u.Title,
+                                             Release = u.Release,
+                                             RunningTime = u.RunningTime,
                                          }).ToList();
 
-            return moviesDTO;
+            return movies;
         }
 
         #endregion

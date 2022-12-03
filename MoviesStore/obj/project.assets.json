@@ -1148,17 +1148,17 @@
           "bin/placeholder/DataAccess.dll": {}
         }
       },
-      "Infraestructure/1.0.0": {
+      "Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "DataAccess": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Infraestructure.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Infraestructure.dll": {}
+          "bin/placeholder/Infrastructure.dll": {}
         }
       }
     }
@@ -3651,15 +3651,15 @@
       "path": "../DataAccess/DataAccess.csproj",
       "msbuildProject": "../DataAccess/DataAccess.csproj"
     },
-    "Infraestructure/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Infraestructure/Infraestructure.csproj",
-      "msbuildProject": "../Infraestructure/Infraestructure.csproj"
+      "path": "../Infraestructure/Infrastructure.csproj",
+      "msbuildProject": "../Infraestructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Infraestructure >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -3670,11 +3670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\MoviesStore\\MoviesStore.csproj",
+      "projectUniqueName": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\MoviesStore\\MoviesStore.csproj",
       "projectName": "MoviesStore",
-      "projectPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\MoviesStore\\MoviesStore.csproj",
+      "projectPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\MoviesStore\\MoviesStore.csproj",
       "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\MoviesStore\\obj\\",
+      "outputPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\MoviesStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3692,8 +3692,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\carlo\\source\\repos\\MoviesStore\\Infraestructure\\Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\Infraestructure\\Infraestructure.csproj"
+            "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\Infraestructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\Infraestructure\\Infrastructure.csproj"
             }
           }
         }

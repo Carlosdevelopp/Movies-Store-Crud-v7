@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4q34iMcg5wHzmO1O4gCCNd80BZTMsDkRWkOTWysYoQ5SfgYynPdeiN/P4tR655DywBr0m68GrXEtoP+14wddAw==",
+  "dgSpecHash": "ae7STV/B1PiechfvfBUnnFXuK8T3RygEzn+9MgS5RZpOLW8L641n28u9tME3PBOz3khDEb+bbIOnG3mx5DKh2w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\DataAccess\\DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

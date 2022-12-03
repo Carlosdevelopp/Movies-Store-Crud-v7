@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DataAccess
-build_property.ProjectDir = C:\Users\carlo\source\repos\MoviesStore\DataAccess\
+build_property.ProjectDir = C:\Users\carlo\source\repos\Movies-Store-Crud\DataAccess\

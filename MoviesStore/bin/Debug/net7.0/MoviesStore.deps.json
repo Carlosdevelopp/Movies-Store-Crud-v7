@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "MoviesStore/1.0.0": {
         "dependencies": {
-          "Infraestructure": "1.0.0",
+          "Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -618,12 +618,12 @@
           "DataAccess.dll": {}
         }
       },
-      "Infraestructure/1.0.0": {
+      "Infrastructure/1.0.0": {
         "dependencies": {
           "DataAccess": "1.0.0"
         },
         "runtime": {
-          "Infraestructure.dll": {}
+          "Infrastructure.dll": {}
         }
       }
     }
@@ -1115,7 +1115,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Infraestructure/1.0.0": {
+    "Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

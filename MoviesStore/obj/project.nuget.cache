@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L9k3FMveBgkQH+rFk5D+rmAKeeT1yLehDrGWZbjoI6tP2Q3m171iodVohv5obf1RCY9ab05dNwBYkEbTKoKUPA==",
+  "dgSpecHash": "YkAr1jyKtcPPCvrqGVDl7uJFtWJevEBMDtOvRyQWXUpwJtQMNBV4jcrf4LasR3jFaUXw5R/6F3qMlzwO0FlNLA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carlo\\source\\repos\\MoviesStore\\MoviesStore\\MoviesStore.csproj",
+  "projectFilePath": "C:\\Users\\carlo\\source\\repos\\Movies-Store-Crud\\MoviesStore\\MoviesStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

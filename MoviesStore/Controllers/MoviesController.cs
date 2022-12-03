@@ -1,15 +1,17 @@
-﻿using Infraestructure.Contract;
+﻿using Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MoviesStore.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly IMoviesInfraestructure _moviesInfraestructure;
+        private readonly IMoviesInfrastructure _moviesInfrastructure;
 
-        public MoviesController(IMoviesInfraestructure moviesInfraestructure)
+        public MoviesController(IMoviesInfrastructure moviesInfrastructure)
         {
-            _moviesInfraestructure = moviesInfraestructure;
+            _moviesInfrastructure = moviesInfrastructure;
         }
 
         #region GET
@@ -18,9 +20,9 @@ namespace MoviesStore.Controllers
         {
             try
             {
-                return Ok(_moviesInfraestructure.GetMovies());
+                return Ok(_moviesInfrastructure.GetMovies());
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 return BadRequest("Server internal error");
             }

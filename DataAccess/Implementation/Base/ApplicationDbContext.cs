@@ -5,14 +5,13 @@ namespace DataAccess.Implementation.Base
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext()
-        {
-        }
+        public ApplicationDbContext() { }
+
+        public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         public virtual DbSet<Movies> Movies { get; set; }   
         public virtual DbSet<Genres> Genres { get; set; }
 
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }   
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder) { }
     }
 }

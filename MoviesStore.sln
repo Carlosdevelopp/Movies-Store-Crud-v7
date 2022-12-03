@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesStore", "MoviesStore\MoviesStore.csproj", "{3988B4FC-4510-4756-97CD-0EEC073323CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesStore", "MoviesStore\MoviesStore.csproj", "{3988B4FC-4510-4756-97CD-0EEC073323CA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-DataAccess", "01-DataAccess", "{761E51A7-197F-4176-90A8-6ABF5C167FAC}"
 EndProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Infraestructure", "02-In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Services", "03-Services", "{6D669155-0710-4CFB-90B2-5C27ACF3486C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{E21BA3B7-7355-4FC9-931A-794289040FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infraestructure\Infrastructure.csproj", "{E21BA3B7-7355-4FC9-931A-794289040FC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
