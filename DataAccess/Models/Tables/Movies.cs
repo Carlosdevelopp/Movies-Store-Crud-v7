@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models.Tables
 {
@@ -17,5 +12,8 @@ namespace DataAccess.Models.Tables
         public DateTime Release { get; set; }   
         public int GenreId { get; set; }
         public int AwardId { get; set; }
+
+        public virtual Genres Genres { get; set; }  
+        public virtual Awards Awards { get; set; }  
     }
 }

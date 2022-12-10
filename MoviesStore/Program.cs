@@ -21,7 +21,6 @@ builder.Services.AddScoped<IMoviesDataAccess, MoviesDataAccess>();
 //Conexión SQL Server
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
