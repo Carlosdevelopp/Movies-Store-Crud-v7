@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesStore", "MoviesStore\MoviesStore.csproj", "{3988B4FC-4510-4756-97CD-0EEC073323CA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-DataAccess", "01-DataAccess", "{761E51A7-197F-4176-90A8-6ABF5C167FAC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Infraestructure", "02-Infraestructure", "{01A55510-14C2-4F99-911A-48C5688159EB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Infrastructure", "02-Infrastructure", "{01A55510-14C2-4F99-911A-48C5688159EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Services", "03-Services", "{6D669155-0710-4CFB-90B2-5C27ACF3486C}"
 EndProject
@@ -15,16 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infraestructure\Infrastructure.csproj", "{E21BA3B7-7355-4FC9-931A-794289040FC2}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviesStore", "MoviesStore\MoviesStore.csproj", "{44B75C3F-9A6A-41E6-835C-769E9C3FA325}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E21BA3B7-7355-4FC9-931A-794289040FC2} = {E21BA3B7-7355-4FC9-931A-794289040FC2}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3988B4FC-4510-4756-97CD-0EEC073323CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3988B4FC-4510-4756-97CD-0EEC073323CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3988B4FC-4510-4756-97CD-0EEC073323CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3988B4FC-4510-4756-97CD-0EEC073323CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,14 +32,18 @@ Global
 		{E21BA3B7-7355-4FC9-931A-794289040FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E21BA3B7-7355-4FC9-931A-794289040FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E21BA3B7-7355-4FC9-931A-794289040FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B75C3F-9A6A-41E6-835C-769E9C3FA325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B75C3F-9A6A-41E6-835C-769E9C3FA325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B75C3F-9A6A-41E6-835C-769E9C3FA325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B75C3F-9A6A-41E6-835C-769E9C3FA325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3988B4FC-4510-4756-97CD-0EEC073323CA} = {6D669155-0710-4CFB-90B2-5C27ACF3486C}
 		{95BCB602-BD58-44D2-A3E3-FBAFAA0C9ABE} = {761E51A7-197F-4176-90A8-6ABF5C167FAC}
 		{E21BA3B7-7355-4FC9-931A-794289040FC2} = {01A55510-14C2-4F99-911A-48C5688159EB}
+		{44B75C3F-9A6A-41E6-835C-769E9C3FA325} = {6D669155-0710-4CFB-90B2-5C27ACF3486C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A23DF8E1-BADE-4C34-97F2-F18296FF6135}

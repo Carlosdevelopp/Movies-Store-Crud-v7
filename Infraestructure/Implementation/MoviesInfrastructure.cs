@@ -1,11 +1,6 @@
 ﻿using DataAccess.Contract;
 using DataAccess.Models.Tables;
 using Infrastructure.Contract;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Implementation
 {
@@ -19,6 +14,14 @@ namespace Infrastructure.Implementation
         }
 
         #region GET
+        //Get a record
+        public Movies GetMovie(int movieId)
+        {
+            Movies movie = _moviesDA.GetMovie(movieId); 
+
+            return movie;   
+        }
+
         //Traer todos los registros
         public List<Movies> GetMovies()
         {

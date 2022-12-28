@@ -21,6 +21,15 @@ namespace DataAccess.Implementation
         }
 
         #region GET
+        //Get  a record
+        public Movies GetMovie(int movieId)
+        {
+            Movies movie = (from u in _dbContext.Movies
+                            where u.MovieId == movieId
+                            select u).FirstOrDefault();
+
+            return movie;
+        }
         //Obtener todos los registros
         public List<Movies> GetMovies()
         {

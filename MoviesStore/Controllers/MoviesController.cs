@@ -1,5 +1,7 @@
 ﻿using Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace MoviesStore.Controllers
 {
@@ -14,7 +16,19 @@ namespace MoviesStore.Controllers
             _moviesInfrastructure = moviesInfrastructure;
         }
 
-        #region GET
+        [HttpGet("GetMovie")]   
+        public IActionResult GetMovie(int movieId)
+        {
+            try
+            {
+                return Ok(_moviesInfrastructure.GetMovie(movieId));
+            }
+            catch (Exception)
+            {
+                return BadRequest("server internal error");
+            }
+        }
+
         [HttpGet("GetMovies")]
         public IActionResult GetMovies()
         {
@@ -24,21 +38,8 @@ namespace MoviesStore.Controllers
             }
             catch (Exception)
             {
-                return BadRequest("Server internal error");
+                return BadRequest("error");
             }
         }
-        #endregion
-
-        #region POST
-
-        #endregion
-
-        #region PUT
-
-        #endregion
-
-        #region DELETE
-
-        #endregion
     }
 }
