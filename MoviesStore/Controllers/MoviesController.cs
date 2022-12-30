@@ -1,5 +1,6 @@
 ﻿using DataAccess.Models.Tables;
 using Infrastructure.Contract;
+using Infrastructure.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -47,10 +48,11 @@ namespace MoviesStore.Controllers
 
         #region POST
         [HttpPost("InsertMovie")]
-        public IActionResult InsertMovie(Movies movie)
+        public IActionResult InsertMovie(MoviesInsertDTO movie)
         {
             try
             {
+                _moviesInfrastructure.InsertMovies(movie);
                 return Ok();
             }
             catch (Exception)
