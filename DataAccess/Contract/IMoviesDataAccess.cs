@@ -14,7 +14,7 @@ namespace DataAccess.Contract
         #endregion
 
         #region PUT
-
+        void UpdateMovie(Movies movie);
         #endregion
 
         #region DELETE

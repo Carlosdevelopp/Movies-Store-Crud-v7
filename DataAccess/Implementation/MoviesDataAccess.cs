@@ -1,6 +1,7 @@
 ﻿using DataAccess.Contract;
 using DataAccess.Implementation.Base;
 using DataAccess.Models.Tables;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,7 +51,11 @@ namespace DataAccess.Implementation
         #endregion
 
         #region PUT
-
+        public void UpdateMovie(Movies movie)
+        {
+            _dbContext.Entry(movie).State = EntityState.Modified; ;
+            _dbContext.SaveChanges();
+        }
         #endregion
 
         #region DELETE

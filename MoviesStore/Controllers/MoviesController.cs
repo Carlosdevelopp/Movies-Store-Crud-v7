@@ -52,7 +52,23 @@ namespace MoviesStore.Controllers
         {
             try
             {
-                _moviesInfrastructure.InsertMovies(movie);
+                _moviesInfrastructure.InsertMovie(movie);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+        #endregion
+
+        #region PUT
+        [HttpPut("UpdateMovie")]
+        public IActionResult InsertMovie(MoviesUpdateDTO movie)
+        {
+            try
+            {
+                 _moviesInfrastructure.UpdateMovie(movie);
                 return Ok();
             }
             catch (Exception)
