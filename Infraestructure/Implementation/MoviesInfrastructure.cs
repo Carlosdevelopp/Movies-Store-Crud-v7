@@ -42,15 +42,17 @@ namespace Infrastructure.Implementation
         #endregion
 
         #region POST
-
+     
         #endregion
 
         #region PUT
-
         #endregion
 
         #region DELETE
-
+        public void DeleteMovie(int movieId)
+        {
+            _moviesDA.DeleteMovie(movieId);
+        }
         #endregion
     }
 }

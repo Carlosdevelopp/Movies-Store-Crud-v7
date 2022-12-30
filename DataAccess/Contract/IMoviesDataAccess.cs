@@ -10,7 +10,7 @@ namespace DataAccess.Contract
         #endregion
 
         #region POST
-
+        void InsertMovie(Movies movie);
         #endregion
 
         #region PUT
@@ -18,7 +18,7 @@ namespace DataAccess.Contract
         #endregion
 
         #region DELETE
-
+        void DeleteMovie(int movieId);
         #endregion
     }
 }

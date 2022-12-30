@@ -10,7 +10,6 @@ namespace Infrastructure.Contract
         #endregion
 
         #region POST
-
         #endregion
 
         #region PUT
@@ -18,7 +17,7 @@ namespace Infrastructure.Contract
         #endregion
 
         #region DELETE
-
+        void DeleteMovie(int movieId);
         #endregion
     }
 }

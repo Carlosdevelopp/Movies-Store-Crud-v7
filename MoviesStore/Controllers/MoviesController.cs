@@ -1,4 +1,5 @@
-﻿using Infrastructure.Contract;
+﻿using DataAccess.Models.Tables;
+using Infrastructure.Contract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -16,7 +17,8 @@ namespace MoviesStore.Controllers
             _moviesInfrastructure = moviesInfrastructure;
         }
 
-        [HttpGet("GetMovie")]   
+        #region GET
+        [HttpGet("GetMovie")]
         public IActionResult GetMovie(int movieId)
         {
             try
@@ -41,5 +43,37 @@ namespace MoviesStore.Controllers
                 return BadRequest("error");
             }
         }
+        #endregion
+
+        #region POST
+        [HttpPost("InsertMovie")]
+        public IActionResult InsertMovie(Movies movie)
+        {
+            try
+            {
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+        #endregion
+
+        #region DELETE
+        [HttpDelete("DeleteMovie")]
+        public IActionResult DeleteMovie(int movieId)
+        {
+            try
+            {
+                _moviesInfrastructure.DeleteMovie(movieId);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest("error");
+            }
+        }
+        #endregion
     }
 }

@@ -30,6 +30,7 @@ namespace DataAccess.Implementation
 
             return movie;
         }
+
         //Obtener todos los registros
         public List<Movies> GetMovies()
         {
@@ -41,7 +42,11 @@ namespace DataAccess.Implementation
         #endregion
 
         #region POST
-
+        public void InsertMovie(Movies movie)
+        {
+            _dbContext.Movies.Add(movie);   
+            _dbContext.SaveChanges();   
+        }
         #endregion
 
         #region PUT
@@ -49,7 +54,16 @@ namespace DataAccess.Implementation
         #endregion
 
         #region DELETE
+        // Delete a arecord
+        public void DeleteMovie(int movieId)
+        {
+            Movies movie = (from e in _dbContext.Movies
+                                 where e.MovieId == movieId
+                                 select e).FirstOrDefault();
 
+            _dbContext.Movies.Remove(movie);
+            _dbContext.SaveChanges();
+        }
         #endregion
     }
 }
