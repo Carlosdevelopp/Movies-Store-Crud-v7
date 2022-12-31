@@ -8,6 +8,8 @@ namespace Infrastructure.Contract
         #region GET
         Movies GetMovie(int movieId);
         List<MoviesDTO> GetMovies();
+        AwardsDTO GetMovieDetails(int MovieId);
+        List<AwardsDTO> GetMoviesDetails();
         #endregion
 
         #region POST

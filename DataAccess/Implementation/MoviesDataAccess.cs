@@ -40,6 +40,31 @@ namespace DataAccess.Implementation
 
             return movies;
         }
+
+        //Get a record MovieDetails
+        public Movies GetMovieDetails(int movieId)
+        {
+            Movies movie = (from u in _dbContext.Movies
+                            where u.MovieId == movieId
+                            select u).Include(x => x.Genres)
+                                     .Include(x => x.Awards)
+                                     .FirstOrDefault();
+
+            movie.Genres.Movies = null;
+
+            return movie;
+        }
+
+        //Get all records MoviesDetails
+        public List<Movies> GetMoviesDetails()
+        {
+            List<Movies> movies = (from u in _dbContext.Movies
+                                   select u).Include(u => u.Genres)
+                                            .Include(u => u.Awards)
+                                            .ToList();
+
+            return movies;
+        }
         #endregion
 
         #region POST

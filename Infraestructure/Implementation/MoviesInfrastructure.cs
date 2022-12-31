@@ -40,6 +40,38 @@ namespace Infrastructure.Implementation
             return movies;
         }
 
+        //Get a record MovieDetails
+        public AwardsDTO GetMovieDetails(int MovieId)
+        {
+            Movies movie = _moviesDA.GetMovieDetails(MovieId);
+
+            AwardsDTO awardsDTO = new AwardsDTO()
+            {
+                TitleMovie = movie.Title,
+                DescriptionMovie = movie.Description,
+                ReleaseMovie = movie.Release,
+                RunningTimeMovie = movie.RunningTime,
+            };
+
+            return awardsDTO;
+        }
+
+        //Get all records MoviesDetails
+        public List<AwardsDTO> GetMoviesDetails()
+        {
+            List<Movies> movies = _moviesDA.GetMoviesDetails();
+
+            List<AwardsDTO> awardsDTO = (from u in movies
+                                         select new AwardsDTO
+                                         {
+                                             TitleMovie= u.Title,
+                                             DescriptionMovie = u.Description,  
+                                             ReleaseMovie = u.Release,  
+                                             RunningTimeMovie = u.RunningTime,
+                                         }).ToList();
+
+            return awardsDTO;
+        }
         #endregion
 
         #region POST
