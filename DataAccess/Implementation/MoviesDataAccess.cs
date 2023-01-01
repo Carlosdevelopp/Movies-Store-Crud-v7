@@ -38,6 +38,7 @@ namespace DataAccess.Implementation
             List<Movies> movies = (from m in _dbContext.Movies
                                    select m).ToList();
 
+
             return movies;
         }
 

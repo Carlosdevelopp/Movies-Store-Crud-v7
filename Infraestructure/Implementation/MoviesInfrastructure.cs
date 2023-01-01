@@ -28,16 +28,26 @@ namespace Infrastructure.Implementation
         {
             List<Movies> Movies = _moviesDA.GetMovies();
 
-            List<MoviesDTO> movies = (from u in Movies
-                                         select new MoviesDTO
-                                         {
-                                             DescriptionMovie = u.Description,
-                                             TitleMovie = u.Title,
-                                             ReleaseMovie = u.Release,
-                                             RunningMovie = u.RunningTime,
-                                         }).ToList();
+            //Sintaxis
+            //List<MoviesDTO> movies = (from u in Movies
+            //                             select new MoviesDTO
+            //                             {
+            //                                 DescriptionMovie = u.Description,
+            //                                 TitleMovie = u.Title,
+            //                                 ReleaseMovie = u.Release,
+            //                                 RunningMovie = u.RunningTime,
+            //                             }).ToList();
 
-            return movies;
+            //Method
+            List<MoviesDTO> _movies = Movies.Select(u => new MoviesDTO
+            {
+                DescriptionMovie = u.Description,
+                TitleMovie = u.Title,
+                ReleaseMovie = u.Release,
+                RunningMovie = u.RunningTime,
+            }).ToList();
+
+            return _movies;
         }
 
         //Get a record MovieDetails
@@ -61,14 +71,24 @@ namespace Infrastructure.Implementation
         {
             List<Movies> movies = _moviesDA.GetMoviesDetails();
 
-            List<AwardsDTO> awardsDTO = (from u in movies
-                                         select new AwardsDTO
-                                         {
-                                             TitleMovie= u.Title,
-                                             DescriptionMovie = u.Description,  
-                                             ReleaseMovie = u.Release,  
-                                             RunningTimeMovie = u.RunningTime,
-                                         }).ToList();
+            //Sintaxis
+            //List<AwardsDTO> awardsDTO = (from u in movies
+            //                             select new AwardsDTO
+            //                             {
+            //                                 TitleMovie= u.Title,
+            //                                 DescriptionMovie = u.Description,  
+            //                                 ReleaseMovie = u.Release,  
+            //                                 RunningTimeMovie = u.RunningTime,
+            //                             }).ToList();
+
+            //Method
+            List<AwardsDTO> awardsDTO = movies.Select(u => new AwardsDTO
+            {
+                TitleMovie = u.Title,
+                DescriptionMovie = u.Description,
+                ReleaseMovie = u.Release,
+                RunningTimeMovie = u.RunningTime,
+            }).ToList();
 
             return awardsDTO;
         }
