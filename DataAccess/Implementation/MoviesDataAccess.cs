@@ -2,11 +2,6 @@
 using DataAccess.Implementation.Base;
 using DataAccess.Models.Tables;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess.Implementation
 {
@@ -32,12 +27,11 @@ namespace DataAccess.Implementation
             return movie;
         }
 
-        //Obtener todos los registros
+        //Get all records 
         public List<Movies> GetMovies()
         {
             List<Movies> movies = (from m in _dbContext.Movies
                                    select m).ToList();
-
 
             return movies;
         }
@@ -56,7 +50,7 @@ namespace DataAccess.Implementation
             return movie;
         }
 
-        //Get all records MoviesDetails
+        //Get details of all records
         public List<Movies> GetMoviesDetails()
         {
             List<Movies> movies = (from u in _dbContext.Movies
@@ -69,6 +63,7 @@ namespace DataAccess.Implementation
         #endregion
 
         #region POST
+        //Insert record
         public void InsertMovie(Movies movie)
         {
             _dbContext.Movies.Add(movie);   
@@ -77,6 +72,7 @@ namespace DataAccess.Implementation
         #endregion
 
         #region PUT
+        //Update record 
         public void UpdateMovie(Movies movie)
         {
             _dbContext.Entry(movie).State = EntityState.Modified; ;
@@ -85,7 +81,7 @@ namespace DataAccess.Implementation
         #endregion
 
         #region DELETE
-        // Delete a arecord
+        // Delete record
         public void DeleteMovie(int movieId)
         {
             Movies movie = (from e in _dbContext.Movies

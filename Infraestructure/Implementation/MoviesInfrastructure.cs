@@ -2,6 +2,7 @@
 using DataAccess.Models.Tables;
 using Infrastructure.Contract;
 using Infrastructure.DTO;
+using Infrastructure.Utils;
 
 namespace Infrastructure.Implementation
 {
@@ -32,11 +33,12 @@ namespace Infrastructure.Implementation
             //List<MoviesDTO> movies = (from u in Movies
             //                             select new MoviesDTO
             //                             {
-            //                                 DescriptionMovie = u.Description,
             //                                 TitleMovie = u.Title,
+            //                                 DescriptionMovie = u.Description,
             //                                 ReleaseMovie = u.Release,
             //                                 RunningMovie = u.RunningTime,
             //                             }).ToList();
+
 
             //Method
             List<MoviesDTO> _movies = Movies.Select(u => new MoviesDTO
@@ -81,11 +83,13 @@ namespace Infrastructure.Implementation
             //                                 RunningTimeMovie = u.RunningTime,
             //                             }).ToList();
 
+
+
             //Method
             List<AwardsDTO> awardsDTO = movies.Select(u => new AwardsDTO
             {
-                TitleMovie = u.Title,
-                DescriptionMovie = u.Description,
+                TitleMovie = u.Title.TitleFormat(),
+                DescriptionMovie = u.Description.TextUpperCase(),
                 ReleaseMovie = u.Release,
                 RunningTimeMovie = u.RunningTime,
             }).ToList();
