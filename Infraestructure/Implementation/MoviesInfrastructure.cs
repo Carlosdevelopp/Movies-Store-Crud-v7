@@ -17,11 +17,19 @@ namespace Infrastructure.Implementation
 
         #region GET
         //Get a record
-        public Movies GetMovie(int movieId)
+        public MoviesDTO GetMovie(int movieId)
         {
-            Movies movie = _moviesDA.GetMovie(movieId); 
+            Movies movie = _moviesDA.GetMovie(movieId);
 
-            return movie;   
+            MoviesDTO movieDTO = new MoviesDTO();
+            {
+                movieDTO.TitleMovie = movie.Title.TitleFormat();
+                movieDTO.DescriptionMovie = movie.Description.TextUpperCase();
+                movieDTO.ReleaseMovie = movie.Release;
+                movieDTO.RunningMovie = movie.RunningTime;
+            }
+
+            return movieDTO;   
         }
 
         //Traer todos los registros
@@ -61,8 +69,11 @@ namespace Infrastructure.Implementation
             {
                 TitleMovie = movie.Title,
                 DescriptionMovie = movie.Description,
-                ReleaseMovie = movie.Release,
-                RunningTimeMovie = movie.RunningTime,
+                ReleaseMovie = movie.Release.ToShortDate(),
+                RunningTimeMovie = movie.RunningTime.FormatTime(),
+                Genre = movie.Genres.Genre.ToLower(),
+                Award = movie.Awards.AwardTitle.AwardText(),
+                
             };
 
             return awardsDTO;
@@ -90,8 +101,10 @@ namespace Infrastructure.Implementation
             {
                 TitleMovie = u.Title.TitleFormat(),
                 DescriptionMovie = u.Description.TextUpperCase(),
-                ReleaseMovie = u.Release,
-                RunningTimeMovie = u.RunningTime,
+                ReleaseMovie = u.Release.ToShortDate(),
+                RunningTimeMovie = u.RunningTime.FormatTime(),
+                Genre = u.Genres.Genre.ToLower(),
+                Award = u.Awards.AwardTitle.AwardText(),
             }).ToList();
 
             return awardsDTO;
