@@ -19,6 +19,11 @@ namespace MoviesStore.Controllers
         }
 
         #region GET
+        /// <summary>
+        /// Deletes a specific TodoItem.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("GetMovie")]
         public IActionResult GetMovie(int movieId)
         {

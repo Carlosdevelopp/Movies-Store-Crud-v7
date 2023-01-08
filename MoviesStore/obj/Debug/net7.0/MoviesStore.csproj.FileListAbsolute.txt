@@ -74,3 +74,5 @@ C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\bin\Debug\net7.0\runti
 C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\bin\Debug\net7.0\MoviesStore.xml
+C:\Users\carlo\source\repos\Movies-Store-Crud\MoviesStore\obj\Debug\net7.0\MoviesStore.xml

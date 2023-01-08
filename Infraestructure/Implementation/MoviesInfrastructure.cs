@@ -27,6 +27,8 @@ namespace Infrastructure.Implementation
                 movieDTO.DescriptionMovie = movie.Description.TextUpperCase();
                 movieDTO.ReleaseMovie = movie.Release;
                 movieDTO.RunningMovie = movie.RunningTime;
+                movieDTO.Genre = movie.GenreId;
+                movieDTO.Award = movie.AwardId;
             }
 
             return movieDTO;   
@@ -55,6 +57,8 @@ namespace Infrastructure.Implementation
                 TitleMovie = u.Title,
                 ReleaseMovie = u.Release,
                 RunningMovie = u.RunningTime,
+                Genre = u.GenreId,
+                Award = u.AwardId,
             }).ToList();
 
             return _movies;
