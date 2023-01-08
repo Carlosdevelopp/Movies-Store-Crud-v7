@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace MoviesStore.Controllers
 {
     [Route("api/[controller]")]
+    [Produces("application/json")]
     [ApiController]
     public class MoviesController : ControllerBase
     {
@@ -20,10 +21,26 @@ namespace MoviesStore.Controllers
 
         #region GET
         /// <summary>
-        /// Deletes a specific TodoItem.
+        /// Get a record by id
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="movieId">Integer with id movie</param>
         /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /An
+        ///     {
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "runningMovie": 0,
+        ///       "releaseMovie": "yyyy-MM-dd",
+        ///       "genre": 0,
+        ///       "award": 0
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpGet("GetMovie")]
         public IActionResult GetMovie(int movieId)
         {
@@ -37,6 +54,26 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Get movie list
+        /// </summary>
+        /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /All
+        ///     {
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "runningMovie": 0,
+        ///       "releaseMovie": "yyyy-MM-dd",
+        ///       "genre": 0,
+        ///       "award": 0
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpGet("GetMovies")]
         public IActionResult GetMovies()
         {
@@ -50,6 +87,27 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Get movieDetails by id
+        /// </summary>
+        /// <param name="movieId">Integer with id movie</param>
+        /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /An
+        ///     {
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "releaseMovie": "dd/MM/yyyy",
+        ///       "runningTimeMovie": "0",
+        ///       "genre": "string",
+        ///       "award": "string"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpGet("GetMovieDetails")]
         public IActionResult GetMovieDetails(int movieId)
         {
@@ -63,6 +121,26 @@ namespace MoviesStore.Controllers
             }
         }
 
+        /// <summary>
+        /// Get moviesDetails
+        /// </summary>
+        /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     GET /All
+        ///     {
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "releaseMovie": "dd/MM/yyyy",
+        ///       "runningTimeMovie": "0",
+        ///       "genre": "string",
+        ///       "award": "string"
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpGet("GetMoviesDetails")]
         public IActionResult GetMoviesDetails()
         {
@@ -78,6 +156,26 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region POST
+        /// <summary>
+        /// Insert a record 
+        /// </summary>
+        /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /An
+        ///     {
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "releaseMovie": "yyyy-MM-dd",
+        ///       "runningTimeMovie": 0,
+        ///       "genreId": 0,
+        ///       "awardId": 0
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpPost("InsertMovie")]
         public IActionResult InsertMovie(MoviesInsertDTO movie)
         {
@@ -94,6 +192,27 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region PUT
+        /// <summary>
+        /// Update a record 
+        /// </summary>
+        /// <returns></returns>
+        /// /// <remarks>
+        /// Sample request:
+        ///
+        ///     PUT /An
+        ///     {
+        ///       "movieId": 0,
+        ///       "titleMovie": "string",
+        ///       "descriptionMovie": "string",
+        ///       "releaseMovie": "yyyy-MM-dd",
+        ///       "runningMovie": 0,
+        ///       "genre": 0,
+        ///       "award": 0
+        ///     }
+        ///
+        /// </remarks>
+        /// <response code="200">Successful operation and return movie object</response>
+        /// <response code="400">An error ocurred on the server</response>
         [HttpPut("UpdateMovie")]
         public IActionResult InsertMovie(MoviesUpdateDTO movie)
         {
@@ -110,6 +229,12 @@ namespace MoviesStore.Controllers
         #endregion
 
         #region DELETE
+        /// <summary>
+        /// Delete a record 
+        /// </summary>
+        /// <response code="200">Successful operation</response>
+        /// <response code="400">An error ocurred on the server</response>
+        /// <returns></returns>
         [HttpDelete("DeleteMovie")]
         public IActionResult DeleteMovie(int movieId)
         {
