@@ -10,7 +10,7 @@
              </summary>
              <param name="movieId">Integer with id movie</param>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  GET /An
@@ -32,7 +32,7 @@
              Get movie list
              </summary>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  GET /All
@@ -55,7 +55,7 @@
              </summary>
              <param name="movieId">Integer with id movie</param>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  GET /An
@@ -77,7 +77,7 @@
              Get moviesDetails
              </summary>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  GET /All
@@ -99,7 +99,7 @@
              Insert a record 
              </summary>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  POST /An
@@ -121,7 +121,7 @@
              Update a record 
              </summary>
              <returns></returns>
-             /// <remarks>
+             <remarks>
              Sample request:
             
                  PUT /An

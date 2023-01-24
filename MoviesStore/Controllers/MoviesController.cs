@@ -25,7 +25,7 @@ namespace MoviesStore.Controllers
         /// </summary>
         /// <param name="movieId">Integer with id movie</param>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     GET /An
@@ -58,7 +58,7 @@ namespace MoviesStore.Controllers
         /// Get movie list
         /// </summary>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     GET /All
@@ -92,7 +92,7 @@ namespace MoviesStore.Controllers
         /// </summary>
         /// <param name="movieId">Integer with id movie</param>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     GET /An
@@ -125,7 +125,7 @@ namespace MoviesStore.Controllers
         /// Get moviesDetails
         /// </summary>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     GET /All
@@ -160,7 +160,7 @@ namespace MoviesStore.Controllers
         /// Insert a record 
         /// </summary>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     POST /An
@@ -196,7 +196,7 @@ namespace MoviesStore.Controllers
         /// Update a record 
         /// </summary>
         /// <returns></returns>
-        /// /// <remarks>
+        /// <remarks>
         /// Sample request:
         ///
         ///     PUT /An
